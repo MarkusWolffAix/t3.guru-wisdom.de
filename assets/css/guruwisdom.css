@@ -225,7 +225,7 @@ audio::-webkit-media-controls-enclosure {
 /* Spezifische Titelgrößen */
 .wisdom-card h1 { font-size: 2.8rem; margin-top: 0; }
 .wisdom-card h2 { font-size: 1.8rem; color: #6c757d; margin-bottom: 1.5rem; }
-.wisdom-card h3 { font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; }
+.wisdom-card h3 { font-size: 1.5rem; color: #6c757d; margin-top: 1.5rem; }
 
 /* Markdown Extras */
 #markdown-body blockquote {
@@ -556,16 +556,16 @@ footer#footer a:hover { opacity: 0.7; }
    REPARATUR: DETAILSEITE (HAUPT-WISDOM)
    ========================================= */
 
-/* 1. Basis-Design für die große Karte auf der Detailseite */
 .wisdom-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08); /* Sanfter Schatten für die große Karte */
-    max-width: 800px; /* Verhindert, dass die Karte auf dem PC riesig wird */
-    margin: 0 auto;   /* Zentriert die Karte auf dem Bildschirm */
-    
-    /* overflow: hidden; MÜSSEN wir weglassen, sonst geht der Zoom auf der Startseite kaputt. 
-       Dafür runden wir das Bild unten manuell ab: */
+    background: #ffffff;
+    max-width: 700px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hintergrund-Wechsel entfernt */
+    cursor: default; /* Standard-Cursor */
 }
 
 /* 2. Das große Bild auf der Detailseite zähmen */
@@ -611,4 +611,11 @@ footer#footer a:hover { opacity: 0.7; }
     
     /* NEU: Das erzeugt den perfekten, gleichmäßigen Abstand zwischen den Karten! */
     gap: 5px; 
+}
+
+.wisdom-card.wisdom-card-link:hover {
+    transform: translateY(-4px) translateX(5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08), 0 24px 48px rgba(0, 0, 0, 0.12); 
+    background-color: #f8f9fa !important; 
+    cursor: pointer; /* Nur hier wird der Cursor zum Zeiger */
 }

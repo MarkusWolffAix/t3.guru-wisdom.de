@@ -69,7 +69,7 @@ $this->setTitle('Übersicht der Weisheiten');
                             $imagePathJpg = "https://media.guru-wisdom.de/images/{$id}.jpg";
                         ?>
 
-                        <div class="card wisdom-card p-3 shadow-sm border-0 mb-1" data-category="<?= htmlspecialchars((string)$category) ?>">
+                        <div class="card wisdom-card  wisdom-card-link p-3 shadow-sm border-0 mb-1" data-category="<?= htmlspecialchars((string)$category) ?>">
                             
                             <!-- Anklickbarer Bereich: Bild links, Text rechts -->
                             <a href="<?= htmlspecialchars((string)$id) ?>" class="wisdom-clickable-area text-decoration-none d-flex flex-row align-items-center">
