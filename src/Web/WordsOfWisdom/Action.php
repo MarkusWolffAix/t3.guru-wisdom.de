@@ -131,6 +131,7 @@ final class Action implements RequestHandlerInterface
                 'audio'       => $audio,
                 'prevId'      => $newerWisdom['slug'] ?? null,
                 'nextId'      => $olderWisdom['slug'] ?? null,
+                'currentUrl'  => (string) $request->getUri(), 
             ]); 
     }
 }   

@@ -18,6 +18,7 @@ use Yiisoft\View\WebView;
  * @var string|null $description A short description or excerpt.
  * @var string|null $prevId      The ID of the previous wisdom (for navigation).
  * @var string|null $nextId      The ID of the next wisdom (for navigation).
+ * @var string      $currentUrl  The dynamic absolute URL from request.
  * @var WebView     $this        The view component rendering this template.
  */
 
@@ -34,6 +35,20 @@ if (!empty($keywords)) {
 } else {
     $this->registerMeta(['name' => 'keywords', 'content' => 'Weisheiten, Zitate, Inspiration, Philosophie, Spiritualität, Nordische Mythologie, Guru-Wisdom'], 'keywords');
 }
+
+$ogDescription = !empty($description) 
+    ? $description 
+    : 'Entdecke tiefgründige Weisheiten und Zitate für jeden Tag. Lass dich inspirieren und finde neue Perspektiven für dein Leben.';
+
+// Da OG-Bild-Tags absolute URLs erfordern, bauen wir die URL passend zu deinem Media-Server auf:
+$ogImageUrl = 'https://media.guru-wisdom.de/images/' . $id . '.jpg';
+
+$this->registerMeta(['property' => 'og:title', 'content' => $title], 'og:title');
+$this->registerMeta(['property' => 'og:description', 'content' => $ogDescription], 'og:description');
+$this->registerMeta(['property' => 'og:image', 'content' => $ogImageUrl], 'og:image');
+$this->registerMeta(['property' => 'og:url', 'content' => $currentUrl], 'og:url');
+$this->registerMeta(['property' => 'og:type', 'content' => 'article'], 'og:type'); 
+
 ?>
 
 <div class="d-flex justify-content-center w-100">
