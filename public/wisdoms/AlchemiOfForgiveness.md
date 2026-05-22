@@ -32,74 +32,40 @@ Akzeptanz ist kein Akt der Schwäche oder des Aufgebens. Sie ist das kraftvolle,
 
 ---
 
-## Musik & Lyrik / Music & Lyrics
+## Lyrik: Die Alchemie der Gnade
 
-**Track-Info:**
-*   **Titel:** Halting the Wheel[cite: 1]
-*   **Länge:** ca. 2:45 Min.[cite: 1]
-*   **Genre:** Ambient Spiritual Folk / Mantra-influenced Indie[cite: 1]
-*   **Tempo:** Ruhig, getragen (72 BPM)[cite: 1]
-*   **Stimmung:** Transformierend, friedvoll, befreiend[cite: 1]
-*   **Instrumentierung:** Akustische Gitarre, sanfte Flächen (Pad-Synthesizer), weiche Perkussion[cite: 1]
+(Strophe 1)
+Schwer ist die Last, von Hand zu Hand gereicht,
+Eine stille Kette der Trauer, die nur schwer weicht.
+Gefangen im Echo eines blinden Schmerzes,
+Gehe ich durch die Schatten, mit schwerem Herzen.
 
-### English Lyrics
-**(Verse 1)**
-The stone is heavy, the stone is hot
-We pass it on, we change it not
-An endless wheel of weight and pain
-We throw the spark and light the chain[cite: 1]
+(Refrain)
+Doch ich hebe meine Hände zum weiten Himmelszelt,
+Lass die Rüstung fallen, spüre, wie der Zorn zerfällt.
+Mit weichem Herzen durchbreche ich die bittere Reih',
+Die Alchemie der Gnade macht mich endlich frei.
 
-**(Chorus)**
-But here I stand, and here I stay
-I catch the fire, I clear the way
-No more rolling down the hill
-With love inside, the wheel stands still[cite: 1]
+(Strophe 2)
+Ich hinterfrage die Stimmen, die Geschichten in meinem Sinn,
+Lasse all die Illusionen und die Angst dahin.
+Manches kann ich wandeln, manches bleibt bestehn,
+Ich finde Frieden darin, es einfach anzusehn.
 
-**(Verse 2)**
-I look into the mirror’s eye
-I ask the truth, I question the lie
-And where the hands can't turn the tide
-I let the silent peace abide[cite: 1]
+(Bridge)
+Wenn es keinen Ort mehr zum Fliehen gibt, keinen Kampf mehr zu kämpfen,
+Trete ich aus dem Dunkel, um das Licht nicht mehr zu dämpfen.
+Eine radikale Akzeptanz, ein leises, stilles „Ja“,
+Heilt all die gebrochenen Teile, macht die Sicht wieder klar.
 
-**(Chorus)**
-'Cause here I stand, and here I stay
-I catch the fire, I clear the way
-No more rolling down the hill
-With love inside, the wheel stands still[cite: 1]
+(Refrain)
+Also hebe ich meine Hände zum weiten Himmelszelt,
+Lass die Rüstung fallen, spüre, wie der Zorn zerfällt.
+Mit weichem Herzen durchbreche ich die bittere Reih',
+Die Alchemie der Gnade macht mich endlich frei.
 
-**(Outro)**
-Let it breathe, let it go
-In acceptance, love will grow
-The space is wide, the space is free
-I am home, inside of me[cite: 1]
-
-### Deutsche Übersetzung
-**(Strophe 1)**
-Der Stein ist schwer, der Stein ist heiß
-Wir reichen ihn weiter im alten Kreis
-Ein endloses Rad aus Wucht und Schmerz
-Wir werfen den Funken von Herz zu Herz
-
-**(Refrain)**
-Doch hier stehe ich, hier halte ich stand
-Ich fange das Feuer in meiner Hand
-Kein Rollen mehr hinab ins Tal
-Die Liebe beendet die alte Qual
-
-**(Strophe 2)**
-Ich blicke tief in den Spiegel hinein
-Hinterfrage die Lüge, suche den Schein
-Und wo kein Handeln das Schicksal dreht
-Ein stiller, tiefer Friede entsteht
-
-**(Refrain)**
-Denn hier stehe ich, hier halte ich stand
-Ich fange das Feuer in meiner Hand
-Kein Rollen mehr hinab ins Tal
-Die Liebe beendet die alte Qual
-
-**(Outro)**
-Lass es atmen, lass es los
-In der Akzeptanz wird die Liebe groß
-Der Raum ist weit, der Raum ist frei
-Ich bin zu Hause, die Angst ist vorbei
+(Outro)
+Der Kreislauf endet hier, im weiten Unbekannten,
+Ich vergebe der Welt, und all meinen inneren Verwandten.
+Atme die Stille ein...
+Atme den Schmerz aus.
