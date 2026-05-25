@@ -2,20 +2,78 @@
 
 declare(strict_types=1);
 
+use Yiisoft\Html\Html; 
+use Yiisoft\View\WebView;
+
 /** @var \Yiisoft\View\WebView $this */
 /** @var array $wisdoms */
+/** @var string      $currentUrl     The dynamic absolute URL from request. */
 
+$ogImageUrl = $currentUrl . 'images/logo/GuruWisdom.png';
+$finalAuthor = 'Markus Wolff & Team';
+$finalPublisher = 'GURU Wisdom';
+$title = 'Archiv der Weisheiten';
+$description = 'Entdecke auf Guru-Wisdom tiefgründige Weisheiten. Lass dich inspirieren und finde neue Perspektiven für dein Leben.';
 
+$this->registerMeta(['property' => 'og:title', 'content' => $title], 'og:title');
+$this->registerMeta(['property' => 'og:description', 'content' =>  $description ], 'og:description');
+$this->registerMeta(['property' => 'og:image', 'content' => $ogImageUrl], 'og:image');
+$this->registerMeta(['property' => 'og:url', 'content' => $currentUrl], 'og:url');
+$this->registerMeta(['property' => 'og:type', 'content' => 'article'], 'og:type'); 
 
-$this->registerMeta(['name' => 'description', 'content' => 'Entdecke auf Guru-Wisdom tiefgründige Weisheiten und Zitate für jeden Tag. Lass dich inspirieren und finde neue Perspektiven für dein Leben.'], 'description');
+$this->registerMeta(['name' => 'description', 'content' => $description], 'description');
 $this->registerMeta(['name' => 'keywords', 'content' => 'Weisheiten, Zitate, Inspiration, Philosophie, Spiritualität, Nordische Mythologie, Guru-Wisdom'], 'keywords');
-$this->registerMeta(['name' => 'author', 'content' => 'Markus Wolff'], 'author');
+$this->registerMeta(['name' => 'author', 'content' => $finalAuthor], 'author');
 $this->registerMeta(['name' => 'robots', 'content' => 'index, follow'], 'robots');
 
+$this->registerMeta(['name' => 'twitter:card', 'content' => 'summary_large_image'], 'twitter:card');
+$this->registerMeta(['name' => 'twitter:title', 'content' => $title], 'twitter:title');
+$this->registerMeta(['name' => 'twitter:description', 'content' => $description], 'twitter:description');
+$this->registerMeta(['name' => 'twitter:image', 'content' => $ogImageUrl], 'twitter:image');
 
-$this->setTitle('Übersicht der Weisheiten');
+$this->registerLinkTag(Html::link($currentUrl, ['rel' => 'canonical']));
+
+$this->registerMeta(['name' => 'theme-color', 'content' => '#ffffff'], 'theme-color');
+
+$schemaData = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Article',
+    'headline' => $title,
+    'description' => $description,
+    'image' => [
+        $ogImageUrl
+    ],
+    'author' => [
+        '@type' => 'Person',
+        'name' => $finalAuthor, 
+        'url' => 'https://guru-wisdom.de/impressum' 
+    ],
+    'publisher' => [
+        '@type' => 'Organization',
+        'name' => $finalPublisher, 
+        'logo' => [
+            '@type' => 'ImageObject',
+            'url' => 'https://guru-wisdom.de/images/logo/GuruWisdom.jpg'
+        ]
+    ],
+    'mainEntityOfPage' => [
+        '@type' => 'WebPage',
+        '@id' => $currentUrl
+    ]
+];
+
+// Falls ein Datum im Markdown hinterlegt war, fügen wir es ISO 8601 formatiert hinzu
+if (!empty($datePublished)) {
+    $schemaData['datePublished'] = date('c', strtotime((string)array_first($wisdoms)['date'] ?? 'now'));
+}
+
+// Array in einen sicheren JSON-String umwandeln
+$jsonLd = json_encode($schemaData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+
+$this->setTitle($title);
 ?>
 
+    <script type="application/ld+json"><?= $jsonLd ?></script>
 
 <!-- flex-column zwingt die Elemente IMMER untereinander. flex-md-row wurde entfernt. -->
     <div class="container d-flex flex-column align-items-center justify-content-center">

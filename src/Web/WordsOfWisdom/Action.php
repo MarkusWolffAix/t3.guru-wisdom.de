@@ -64,6 +64,7 @@ final class Action implements RequestHandlerInterface
             return $this->viewRenderer
                 ->withLayout('@src/Web/Shared/Layout/Main/layout') // Force path to layout
                 ->render('overview', [
+                    'currentUrl'  => (string) $request->getUri(), 
                     'wisdoms' => $allWisdoms,
                 ]); 
         }
