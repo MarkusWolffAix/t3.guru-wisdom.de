@@ -206,6 +206,29 @@ public function processPlaceholders(string $text): string
 
     }, $text);
     
+    $text = preg_replace_callback('/\[video:([^\]]+)\]/', function(array $matches) {
+        
+        // 1. ID/Dateinamen bereinigen und absichern
+        $rawId = trim($matches[1]);
+        $filename = basename($rawId); // Verhindert Path Traversal
+        
+        // 2. Basis-URL für Videos
+        $videoUrl = "https://media.guru-wisdom.de/video/" . $filename . ".mp4";
+        
+        // 3. Escaping
+        $safeVideoUrl = htmlspecialchars($videoUrl, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+
+        // 4. HTML5 Video Player Output
+        // preload="metadata" sorgt dafür, dass nur die Videolänge/Größe geladen wird, bis der Nutzer auf Play drückt.
+        return '<div class="my-4 text-center">
+            <video controls preload="metadata" style="max-width: 100%; width: 640px; border-radius: 8px; background-color: #000;">
+                <source src="' . $safeVideoUrl . '" type="video/mp4">
+                Dein Browser unterstützt das Video-Tag nicht. Bitte aktualisiere deinen Browser.
+            </video>
+        </div>';
+
+    }, $text);
+
     return $text;
 }
 
